@@ -72,7 +72,7 @@ nav{
 .logo-text strong{display:block;font-size:1.1rem;font-weight:800;color:var(--green);line-height:1.1}
 .logo-text span{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text3)}
 .section-title em,.hero h1 em,.final-cta h2 em{color:var(--pink);}
-.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links{display:flex;align-items:center;gap:1.6rem;list-style:none}
 .nav-links a{font-size:.85rem;font-weight:600;color:var(--text2);transition:color .2s}
 .nav-links a:hover{color:var(--green)}
 .nav-cta{
@@ -83,10 +83,14 @@ nav{
 }
 .nav-cta:hover{background:#064035;transform:translateY(-1px)}
 /* Rota de despressurizacao: candidatos a cuidador (fora do funil de vendas) */
-.nav-links a.link-rh{font-size:.68rem;font-weight:600;color:#A9A9A9;letter-spacing:.02em;opacity:.85}
-.nav-links a.link-rh:hover{color:var(--green);opacity:1}
-.link-rh-footer{font-size:.7rem;color:#4a4a4a;text-decoration:underline;text-underline-offset:3px;transition:color .2s}
-.link-rh-footer:hover{color:#7FE0C0}
+.nav-links a.link-rh{display:inline-flex;align-items:center;gap:.45rem;font-size:.82rem;font-weight:800;color:var(--green-dark);letter-spacing:.01em;white-space:nowrap;padding:.58rem 1.2rem;border:2px solid var(--green);border-radius:100px;background:var(--green-light);transition:background .2s,color .2s,transform .15s,box-shadow .2s}
+.nav-links a.link-rh:hover{background:var(--green);color:#fff;transform:translateY(-1px);box-shadow:0 6px 16px rgba(26,159,212,.32)}
+.nav-links a.link-rh svg{width:16px;height:16px;flex:none}
+.footer-rh{max-width:980px;margin:2.25rem auto 0;padding:1.6rem 1.25rem;display:flex;flex-direction:column;align-items:center;gap:.9rem;text-align:center;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:18px}
+.footer-rh span{font-size:.84rem;color:#8a8a8a;line-height:1.6;letter-spacing:.01em}
+.link-rh-footer{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,var(--green) 0%,var(--green-mid) 100%);color:#fff;padding:.95rem 2.2rem;border-radius:100px;font-size:.95rem;font-weight:800;letter-spacing:.02em;text-decoration:none;box-shadow:0 10px 28px rgba(26,159,212,.35);transition:transform .18s,box-shadow .18s,filter .2s}
+.link-rh-footer:hover{color:#fff;transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 14px 34px rgba(26,159,212,.5)}
+.link-rh-footer svg{width:19px;height:19px;flex:none}
 .rh-overlay{position:fixed;inset:0;background:rgba(10,20,18,.72);backdrop-filter:blur(4px);z-index:9999;display:none;align-items:center;justify-content:center;padding:1.25rem}
 .rh-overlay.open{display:flex}
 .rh-modal{background:#fff;border-radius:20px;max-width:460px;width:100%;padding:2rem 1.75rem;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto}
@@ -589,6 +593,7 @@ footer{background:#0D0D0D;padding:4rem 2rem 2rem}
   nav .nav-links.open li{width:100%;list-style:none}
   nav .nav-links.open a{display:block;padding:.85rem 0;font-size:1rem;border-bottom:1px solid var(--border)}
   nav .nav-links.open li:last-child a{border-bottom:none}
+  nav .nav-links.open a.link-rh{display:flex;justify-content:center;font-size:.92rem;padding:.85rem 1.2rem;margin-top:.85rem;border-bottom:2px solid var(--green)}
   .hero-inner,.qs-inner,.trab-inner{grid-template-columns:1fr}
   .hero{min-height:auto;padding:3.5rem 1rem 4rem}
   .hero-card{display:none}
@@ -596,6 +601,8 @@ footer{background:#0D0D0D;padding:4rem 2rem 2rem}
   .steps-row::before{display:none}
   .footer-inner{grid-template-columns:1fr 1fr}
   .footer-bottom{flex-direction:column;text-align:center}
+  .footer-rh{padding:1.4rem 1rem}
+  .link-rh-footer{width:100%;justify-content:center;padding:1rem 1.25rem;font-size:.9rem}
   .contratar{grid-template-columns:1fr}
   .mvv-grid{grid-template-columns:1fr}
   .quem-somos,.servicos,.como-funciona,.diferenciais,.trabalhe,.numeros,.depoimentos,.faq,.final-cta{padding:4rem 1rem}
@@ -635,7 +642,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#como-funciona">Como Funciona</a></li>
     <li><a href="#faq">Dúvidas</a></li>
-    <li><a href="#" class="link-rh" onclick="abrirModalRH(event)">Sou Cuidador / Trabalhe Conosco</a></li>
+    <li><a href="#" class="link-rh" onclick="abrirModalRH(event)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M10 7V5h4v2"/><path d="M2 12h20"/></svg>Sou Cuidador / Trabalhe Conosco</a></li>
   </ul>
   <a href="https://wa.me/5516992202099?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20contratar%20um%20cuidador%20para%20minha%20fam%C3%ADlia." class="nav-cta">SOLICITAR ORÇAMENTO FAMILIAR</a>
   <div class="nav-mobile-toggle" onclick="toggleMenu()">
@@ -1170,8 +1177,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
   </div>
+  <div class="footer-rh">
+    <span>É cuidador(a), técnico(a) de enfermagem, enfermeiro(a) ou psicólogo(a)?</span>
+    <a href="#" class="link-rh-footer" onclick="abrirModalRH(event)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M10 7V5h4v2"/><path d="M2 12h20"/></svg>Sou Cuidador / Trabalhe Conosco</a>
+  </div>
   <div class="footer-bottom">
-    <p style="color:#444">© 2025 APOIARE Cuidadores. Todos os direitos reservados. &nbsp;·&nbsp; <a href="#" class="link-rh-footer" onclick="abrirModalRH(event)">Sou Cuidador / Trabalhe Conosco</a></p>
+    <p style="color:#444">© 2025 APOIARE Cuidadores. Todos os direitos reservados.</p>
     <p style="color:#444">Recife e Região Metropolitana · PE</p>
   </div>
 </footer>
