@@ -83,8 +83,8 @@ nav{
 }
 .nav-cta:hover{background:#064035;transform:translateY(-1px)}
 /* Rota de despressurizacao: candidatos a cuidador (fora do funil de vendas) */
-.nav-links a.link-rh{display:inline-flex;align-items:center;gap:.45rem;font-size:.82rem;font-weight:800;color:var(--green-dark);letter-spacing:.01em;white-space:nowrap;padding:.58rem 1.2rem;border:2px solid var(--green);border-radius:100px;background:var(--green-light);transition:background .2s,color .2s,transform .15s,box-shadow .2s}
-.nav-links a.link-rh:hover{background:var(--green);color:#fff;transform:translateY(-1px);box-shadow:0 6px 16px rgba(26,159,212,.32)}
+.nav-links a.link-rh{display:inline-flex;align-items:center;gap:.45rem;font-size:.82rem;font-weight:800;color:#fff;letter-spacing:.01em;white-space:nowrap;padding:.58rem 1.2rem;border:2px solid #0B6B4E;border-radius:100px;background:#0B6B4E;transition:background .2s,color .2s,transform .15s,box-shadow .2s}
+.nav-links a.link-rh:hover{background:#064035;border-color:#064035;color:#fff;transform:translateY(-1px);box-shadow:0 6px 16px rgba(11,107,78,.32)}
 .nav-links a.link-rh svg{width:16px;height:16px;flex:none}
 .footer-rh{max-width:980px;margin:2.25rem auto 0;padding:1.6rem 1.25rem;display:flex;flex-direction:column;align-items:center;gap:.9rem;text-align:center;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:18px}
 .footer-rh span{font-size:.84rem;color:#8a8a8a;line-height:1.6;letter-spacing:.01em}
@@ -222,7 +222,10 @@ nav{
 /* ─── QUEM SOMOS ─── */
 .quem-somos{padding:6rem 2rem;background:var(--white)}
 .qs-inner{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:flex-start}
-.qs-img-wrap{position:relative}
+.qs-img-wrap{position:relative;position:sticky;top:90px;align-self:start}
+.qs-mvv{max-width:980px;margin:3rem auto 0}
+.qs-mvv .mvv-grid{grid-template-columns:1fr 1fr}
+.qs-mvv .mvv-item:nth-child(3){grid-column:1/-1}
 .qs-img-box{
   border-radius:20px;overflow:hidden;
   background:var(--green-light);
@@ -593,7 +596,7 @@ footer{background:#0D0D0D;padding:4rem 2rem 2rem}
   nav .nav-links.open li{width:100%;list-style:none}
   nav .nav-links.open a{display:block;padding:.85rem 0;font-size:1rem;border-bottom:1px solid var(--border)}
   nav .nav-links.open li:last-child a{border-bottom:none}
-  nav .nav-links.open a.link-rh{display:flex;justify-content:center;font-size:.92rem;padding:.85rem 1.2rem;margin-top:.85rem;border-bottom:2px solid var(--green)}
+  nav .nav-links.open a.link-rh{display:flex;justify-content:center;font-size:.92rem;padding:.85rem 1.2rem;margin-top:.85rem;border-bottom:2px solid #0B6B4E}
   .hero-inner,.qs-inner,.trab-inner{grid-template-columns:1fr}
   .hero{min-height:auto;padding:3.5rem 1rem 4rem}
   .hero-card{display:none}
@@ -604,7 +607,9 @@ footer{background:#0D0D0D;padding:4rem 2rem 2rem}
   .footer-rh{padding:1.4rem 1rem}
   .link-rh-footer{width:100%;justify-content:center;padding:1rem 1.25rem;font-size:.9rem}
   .contratar{grid-template-columns:1fr}
-  .mvv-grid{grid-template-columns:1fr}
+  .mvv-grid,.qs-mvv .mvv-grid{grid-template-columns:1fr}
+  .qs-img-wrap{position:static}
+  .qs-mvv{margin-top:2rem}
   .quem-somos,.servicos,.como-funciona,.diferenciais,.trabalhe,.numeros,.depoimentos,.faq,.final-cta{padding:4rem 1rem}
 }
 @media(max-width:480px){
@@ -728,27 +733,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="section-body" style="margin-bottom:1rem;"><strong>Ivana Alencar</strong> é psicóloga e neuropsicóloga, com mestrado e ampla experiência clínica. Atua com foco no cuidado individualizado, ética e acolhimento, além de ter longa trajetória no serviço público.</p>
         <p class="section-body" style="margin-bottom:0;">A <strong>APOIARE CUIDADORES</strong> foi criada pelas duas sócias, que têm mais de 30 anos de amizade, unindo experiência técnica e sensibilidade. A empresa oferece cuidado humanizado, com foco em empatia, respeito e excelência no atendimento.</p>
       </div>
-      <div class="mvv-grid" style="grid-template-columns:1fr;gap:1rem;margin-top:1.75rem">
-        <div class="mvv-item">
-          <h4>Missão</h4>
-          <p>Oferecer apoio qualificado e personalizado para idosos e/ou pessoas acometidas por doenças, buscando melhorar a qualidade de vida dos nossos clientes e familiares, garantindo o acompanhamento integral e humanizado com base nos princípios éticos e legais.</p>
-        </div>
-        <div class="mvv-item">
-          <h4>Visão</h4>
-          <p>Ser referência em cuidados especializados para idosos e/ou pessoas com necessidades e cuidados com a saúde, promovendo um serviço que inspira confiança, dignidade e respeito, reconhecido pela excelência em atendimento e pela humanização e relacionamento.</p>
-        </div>
-        <div class="mvv-item" style="border-top-color:var(--green)">
-          <h4>Valores</h4>
-          <p style="line-height:1.9">
-            <strong>Empatia:</strong> Entender as necessidades individuais de cada cliente, proporcionando cuidados personalizados e atenciosos.<br>
-            <strong>Excelência:</strong> Manter altos padrões de qualidade em cada serviço, com foco em resultados que tragam conforto e bem-estar.<br>
-            <strong>Confiança:</strong> Cultivar relações transparentes e confiáveis, garantindo tranquilidade para os clientes e seus familiares.<br>
-            <strong>Inovação:</strong> Utilizar ferramentas e abordagens modernas para aprimorar os serviços e facilitar a comunicação.<br>
-            <strong>Responsabilidade:</strong> Cumprir com ética e profissionalismo nosso papel, respeitando a dignidade e os direitos de cada indivíduo.
-          </p>
-        </div>
-      </div>
     </div>
+  </div>
+  <div class="qs-mvv">
+        <div class="mvv-grid" style="gap:1rem;margin-top:0">
+          <div class="mvv-item">
+            <h4>Missão</h4>
+            <p>Oferecer apoio qualificado e personalizado para idosos e/ou pessoas acometidas por doenças, buscando melhorar a qualidade de vida dos nossos clientes e familiares, garantindo o acompanhamento integral e humanizado com base nos princípios éticos e legais.</p>
+          </div>
+          <div class="mvv-item">
+            <h4>Visão</h4>
+            <p>Ser referência em cuidados especializados para idosos e/ou pessoas com necessidades e cuidados com a saúde, promovendo um serviço que inspira confiança, dignidade e respeito, reconhecido pela excelência em atendimento e pela humanização e relacionamento.</p>
+          </div>
+          <div class="mvv-item" style="border-top-color:var(--green)">
+            <h4>Valores</h4>
+            <p style="line-height:1.9">
+              <strong>Empatia:</strong> Entender as necessidades individuais de cada cliente, proporcionando cuidados personalizados e atenciosos.<br>
+              <strong>Excelência:</strong> Manter altos padrões de qualidade em cada serviço, com foco em resultados que tragam conforto e bem-estar.<br>
+              <strong>Confiança:</strong> Cultivar relações transparentes e confiáveis, garantindo tranquilidade para os clientes e seus familiares.<br>
+              <strong>Inovação:</strong> Utilizar ferramentas e abordagens modernas para aprimorar os serviços e facilitar a comunicação.<br>
+              <strong>Responsabilidade:</strong> Cumprir com ética e profissionalismo nosso papel, respeitando a dignidade e os direitos de cada indivíduo.
+            </p>
+          </div>
+        </div>
   </div>
 </section>
 
